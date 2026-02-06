@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { CategoryNavigation, Category } from '../molecules/CategoryNavigation';
-import { ImageFrame } from '../atoms/ImageFrame';
-import { VideoGallery } from '../organisms/VideoGallery';
-import { HeadingSerif } from '../atoms/Typography';
+import { CategoryNavigation} from '../components/molecules/CategoryNavigation';
+import { Category } from '../components/molecules/CategoryNavigation';
+import { ImageFrame } from '../components/atoms/ImageFrame';
+import { VideoGallery } from '../components/organisms/VideoGallery';
+import { HeadingSerif } from '../components/atoms/Typography';
 
 const PageGallery: React.FC = () => {
   const [category, setCategory] = useState<Category>('Photo');
@@ -32,3 +33,5 @@ const PageGallery: React.FC = () => {
     </main>
   );
 };
+
+export default PageGallery
