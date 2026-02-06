@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button } from '../atoms/Button';
 
-type Category = 'Photo' | 'Design' | 'Video' | 'Drawings' | 'Sculptures';
+// 1. Exporte uma CONSTANTE (valor real que existe no JS)
+export const CATEGORY_LIST = ['Photo', 'Design', 'Video', 'Drawings', 'Sculptures'] as const;
 
-const CATEGORIES: Category[] = ['Photo', 'Design', 'Video', 'Drawings', 'Sculptures'];
+// 2. Derive o tipo a partir dela
+export type Category = typeof CATEGORY_LIST[number];
 
 interface CategoryNavigationProps {
   active: Category;
@@ -12,7 +14,7 @@ interface CategoryNavigationProps {
 
 export const CategoryNavigation: React.FC<CategoryNavigationProps> = ({ active, onChange }) => (
   <nav className="flex flex-wrap justify-center gap-4 md:gap-8 mb-20 scrollbar-hide py-4 overflow-x-auto">
-    {CATEGORIES.map((cat) => (
+    {CATEGORY_LIST.map((cat) => (
       <Button
         key={cat}
         variant={active === cat ? 'underline' : 'ghost'}
@@ -25,4 +27,3 @@ export const CategoryNavigation: React.FC<CategoryNavigationProps> = ({ active, 
   </nav>
 );
 
-export type { Category };
