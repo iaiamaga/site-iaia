@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '../components/atoms/Button'
 
 const EntryPage: React.FC = () => {
   const navigate = useNavigate();
@@ -48,25 +49,26 @@ const EntryPage: React.FC = () => {
 
         {/* Call to Action Section */}
         <nav className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <button
+          <Button
+            variant='portal'
             onClick={handleDive}
-            className="group relative px-8 py-3 font-mono text-sm tracking-widest uppercase transition-all"
+            className="md-6 group relative px-8 py-3 font-mono text-sm tracking-widest uppercase transition-all"
             aria-label="Enter the gallery"
           >
             <span className="relative z-10 group-hover:text-black transition-colors duration-300">Dive</span>
             <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out" />
-            {/* Minimalist border/underline for default state */}
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/20 group-hover:bg-transparent" />
-          </button>
+          </Button>
 
-          <button
+          <Button
+            variant='portal'
             onClick={handleIdentityCheck}
-            className="group font-mono text-xs tracking-widest uppercase text-white/40 hover:text-white transition-colors duration-300"
+            className="m-6 group font-mono text-xs tracking-widest uppercase text-white/40 hover:text-white transition-colors duration-300"
             aria-label="About the artist"
           >
             Who are you?
             <div className="h-[1px] w-0 group-hover:w-full bg-white/40 transition-all duration-500" />
-          </button>
+          </Button>
         </nav>
       </section>
 
