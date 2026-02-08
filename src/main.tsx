@@ -1,18 +1,18 @@
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import EntryPage from './pages/EntryPage';
-import PageGallery from './pages/GalleryPage';
-import AboutPage from './pages/AboutPage';
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
+import App from './App';
 
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
 
-
-createRoot(document.getElementById('root')!).render(
- <Router>
-      <Routes>
-        <Route path="/" element={<EntryPage />} />
-        <Route path="/gallery" element={<PageGallery/>} />
-        <Route path="/about" element={<AboutPage/>} />
-      </Routes>
-    </Router>,
-)
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </React.StrictMode>
+);
