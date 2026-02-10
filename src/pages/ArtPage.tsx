@@ -16,7 +16,7 @@ export function ArtPage(): React.JSX.Element {
             <img
               src={image.src}
               alt={image.alt}
-              className="max-w-full h-auto object-contain transition-transform duration-300 ease-in-out group-hover:scale-[1.075]"
+              className="max-w-full h-80 object-contain transition-transform duration-300 ease-in-out group-hover:scale-[1.075]"
               loading="lazy"
               decoding="async"
             />

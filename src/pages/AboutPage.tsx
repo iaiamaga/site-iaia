@@ -4,7 +4,7 @@ import { ABOUT_DATA } from '../components/organisms/AboutData';
 
 
 export function AboutPage(): React.JSX.Element {
-  const { name, profileImage, bio, skills, socials } = ABOUT_DATA;
+  const { name, profileImage, bio, skills } = ABOUT_DATA;
   
   return (
     <div className="text-white p-4 max-w-4xl mx-auto">
@@ -13,10 +13,10 @@ export function AboutPage(): React.JSX.Element {
         <img
           src={profileImage}
           alt={`Profile of ${name}`}
-          className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-pink-400 shadow-lg shadow-pink-500/50 flex-shrink-0"
+          className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-blue-400 shadow-lg shadow-blue-500/50 lg:self-start flex-shrink-0"
         />
         <div className="flex-1">
-          <h1 className="text-4xl md:text-5xl font-bold text-pink-300 mb-4">{name}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-500 mb-4">{name}</h1>
           {bio.map((paragraph, index) => (
             <p key={index} className="text-fluid-base mb-4 text-violet-200">
               {paragraph}
@@ -38,7 +38,7 @@ export function AboutPage(): React.JSX.Element {
       </section>
 
       {/* Socials Section */}
-      <section>
+      {/* <section>
         <h2 className="text-3xl font-bold mb-6 text-center text-violet-200">Connect With Me</h2>
         <div className="flex justify-center items-center gap-x-8">
           {socials.map((social) => (
@@ -58,7 +58,7 @@ export function AboutPage(): React.JSX.Element {
             </a>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
 
   );

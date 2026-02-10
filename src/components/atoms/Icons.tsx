@@ -1,5 +1,5 @@
 export const ICONS = {
-  NAV_MAIN: '../../assets/icons/im2b-logo-branco.png',
+  NAV_MAIN: "./src/assets/im2b-logo-branco.png",
   NAV_GALLERY: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/stack-of-photos.png',
   NAV_STUFF: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/box.png',
   NAV_ABOUT: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/about.png',
