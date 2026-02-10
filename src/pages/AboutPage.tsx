@@ -1,52 +1,66 @@
+import '../index.css';
 import React from 'react';
-import { HeadingSerif, TextBody, TextMono } from '../components/atoms/Typography';
+import { ABOUT_DATA } from '../components/organisms/AboutData';
 
-const AboutPage: React.FC = () => {
+
+export function AboutPage(): React.JSX.Element {
+  const { name, profileImage, bio, skills, socials } = ABOUT_DATA;
+  
   return (
-    <main className="pt-40 pb-20 container mx-auto px-6 max-w-4xl">
-      <article className="flex flex-col gap-16">
-        <section>
-          <TextMono className="text-white/30 block mb-4 uppercase tracking-[0.5em]">The Curator</TextMono>
-          <HeadingSerif className="text-5xl md:text-7xl mb-8">Process over product.</HeadingSerif>
-          <div className="space-y-8 text-xl md:text-2xl font-light text-white/70 leading-relaxed font-sans">
-            <p>
-              Não vejo o design como uma ferramenta de solução de problemas, mas como uma linguagem de exploração. 
-              Este arquivo não é um portfólio de vitrine; é um registro de curiosidade técnica e visual.
+    <div className="text-white p-4 max-w-4xl mx-auto">
+      {/* Header Section */}
+      <header className="flex flex-col md:flex-row items-center gap-8 mb-12 text-center md:text-left">
+        <img
+          src={profileImage}
+          alt={`Profile of ${name}`}
+          className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-pink-400 shadow-lg shadow-pink-500/50 flex-shrink-0"
+        />
+        <div className="flex-1">
+          <h1 className="text-4xl md:text-5xl font-bold text-pink-300 mb-4">{name}</h1>
+          {bio.map((paragraph, index) => (
+            <p key={index} className="text-fluid-base mb-4 text-violet-200">
+              {paragraph}
             </p>
-            <p>
-              Minha jornada é transdisciplinar por natureza. Do código que renderiza esta página às esculturas físicas que moldo com as mãos, 
-              o objetivo é o mesmo: encontrar a "aura" no digital.
-            </p>
-          </div>
-        </section>
+          ))}
+        </div>
+      </header>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-16 border-t border-white/5">
-          <div className="flex flex-col gap-4">
-            <TextMono className="text-white">Curiosity_Stack</TextMono>
-            <ul className="space-y-2 text-white/40 font-mono text-sm">
-              <li>— Creative Coding / GLSL</li>
-              <li>— Advanced React Architecture</li>
-              <li>— Physical Component Theory</li>
-              <li>— Visual Storytelling</li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-4">
-            <TextBody className="text-white">Inspirations</TextBody>
-            <ul className="space-y-2 text-white/40 font-mono text-sm">
-              <li>— Neocities Culture</li>
-              <li>— Brutalist Architecture</li>
-              <li>— Analog Glitch Art</li>
-              <li>— Cybernetics</li>
-            </ul>
-          </div>
-        </section>
-        
-        <footer className="pt-20 text-center">
-          <TextMono className="text-white/10">End of Record // No further data available.</TextMono>
-        </footer>
-      </article>
-    </main>
+      {/* Skills Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-6 text-center text-violet-200">Skills</h2>
+        <div className="flex flex-wrap justify-center gap-3">
+          {skills.map((skill) => (
+            <span key={skill} className="bg-violet-800 text-pink-300 px-4 py-2 rounded-full text-sm font-semibold">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* Socials Section */}
+      <section>
+        <h2 className="text-3xl font-bold mb-6 text-center text-violet-200">Connect With Me</h2>
+        <div className="flex justify-center items-center gap-x-8">
+          {socials.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit my ${social.name} profile`}
+              className="block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-[#6921A7] [&:focus-visible>img]:invert"
+            >
+              <img
+                src={social.iconSrc}
+                alt={`${social.name} logo`}
+                className="h-10 w-10 transition-filter duration-170 ease-in-out hover:invert"
+              />
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+
   );
-};
+}
 
-export default AboutPage

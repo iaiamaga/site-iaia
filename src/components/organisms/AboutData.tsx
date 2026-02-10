@@ -1,0 +1,32 @@
+import { ICONS } from "../atoms/Icons"
+
+interface SocialLink {
+  name: string;
+  url: string;
+  iconSrc: string;
+}
+
+interface AboutData {
+  name: string;
+  profileImage: string;
+  bio: string[];
+  skills: string[];
+  socials: SocialLink[];
+}
+
+export const ABOUT_DATA: AboutData = {
+    name: "Jane Doe",
+    profileImage: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
+    bio: [
+      "I'm a passionate creative with a love for capturing moments and telling stories through various mediums. My journey started with a simple film camera, and since then, I've explored the worlds of digital photography, videography, art, and design.",
+      "This website is a collection of my work, a visual diary of my adventures, and a space where I experiment with new ideas. Whether it's the raw energy of a skate video or the quiet beauty of a misty morning, I strive to find the extraordinary in the ordinary."
+    ],
+    skills: [
+      "Photography", "Videography", "Photo Editing", "Video Editing", "Graphic Design", "UI/UX", "HTML & CSS", "React", "JavaScript"
+    ],
+    socials: [
+      { name: 'LinkedIn', url: '#', iconSrc: ICONS.SOCIAL_LINKEDIN },
+      { name: 'GitHub', url: '#', iconSrc: ICONS.SOCIAL_GITHUB },
+      { name: 'Twitter', url: '#', iconSrc: ICONS.SOCIAL_TWITTER },
+    ],
+}

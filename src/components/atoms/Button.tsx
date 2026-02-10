@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button className={`${baseStyles} ${variants[variant]} ${className}`} {...props}>
       {/* Span de fundo para variante 'portal' */}
       {variant === 'portal' && (
-        <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out -z-10" />
+        <span className="absolute inset-0 z-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out " />
       )}
       
       {/* 
@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
           Adicionamos `flex items-center justify-center` para centralizar a imagem
           e `relative z-10 pointer-events-none` para que a imagem não capture cliques.
       */}
-      <span className="relative z-10 pointer-events-none flex items-center justify-center h-full w-full">
+      <span className="relative z-0 pointer-events-none flex items-center justify-center h-full w-full">
         {children}
       </span>
     </button>

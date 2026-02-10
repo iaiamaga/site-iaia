@@ -1,11 +1,11 @@
 export const ICONS = {
-  NAV_MAIN: 'https://img.icons8.com/fluency-systems-filled/120/ffffff/home.png',
+  NAV_MAIN: '../../assets/icons/im2b-logo-branco.png',
   NAV_GALLERY: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/stack-of-photos.png',
   NAV_STUFF: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/box.png',
   NAV_ABOUT: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/about.png',
   NAV_EXTRAS: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/sparkling.png',
   SIDEBAR_PHOTO: 'https://img.icons8.com/fluency-systems-filled/90/ffffff/camera.png',
-  SIDEBAR_VIDEO: 'https://img.icons8.com/fluency-systems-filled/90/ffffff/video.png',
+  SIDEBAR_VIDEO: '../../assets/icons/video.png',
   SIDEBAR_ART: 'https://img.icons8.com/fluency-systems-filled/90/ffffff/paint-palette.png',
   SIDEBAR_DESIGN: 'https://img.icons8.com/fluency-systems-filled/90/ffffff/ruler-and-pencil.png',
   FOOTER_TOP: 'https://img.icons8.com/fluency-systems-filled/100/ffffff/up.png',

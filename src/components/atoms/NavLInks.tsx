@@ -8,7 +8,7 @@ interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { to: '/', src:"", alt: 'Main', className: 'h-[90px]' },
+  { to: '/', src: ICONS.NAV_MAIN, alt: 'Main', className: 'h-[90px]' },
   { to: '/photo', src: ICONS.NAV_GALLERY, alt: 'Gallery', className: 'h-[80px]' },
   { to: '/recc', src: ICONS.NAV_STUFF, alt: 'Stuff', className: 'h-[80px]' },
   { to: '/about', src: ICONS.NAV_ABOUT, alt: 'About', className: 'h-[80px]' },
