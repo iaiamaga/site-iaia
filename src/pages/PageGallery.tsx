@@ -6,7 +6,7 @@ interface ImageGalleryProps {
 }
 
 // Custom styles for container queries with Tailwind CSS syntax
-const galleryStyles = `
+export const galleryStyles = `
   .gallery-grid {
     display: grid;
     gap: 1.5rem;
