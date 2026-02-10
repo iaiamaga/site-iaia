@@ -1,5 +1,5 @@
-import React from 'react';
-import { TextMono } from '../atoms/Typography';
+// import React from 'react';
+// import { TextMono } from '../atoms/Typography';
 
 export const ArchiveFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();

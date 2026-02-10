@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../atoms/Button';
+// import { Button } from '../atoms/Button';
 
 // 1. Exporte uma CONSTANTE (valor real que existe no JS)
 export const CATEGORY_LIST = ['Photo', 'Design', 'Video', 'Drawings', 'Sculptures'] as const;

@@ -1,7 +1,7 @@
 import { Button } from '../components/atoms/Button';
-import { HeadingSerif } from '../components/atoms/Typography';
-import DiveButton from '../assets/images/mergulhar-button.png';
-import WhoareyouButton from '../assets/images/qm-e-vc-button.png';
+// import { HeadingSerif } from '../components/atoms/Typography';
+// import DiveButton from '../assets/images/mergulhar-button.png';
+// import WhoareyouButton from '../assets/images/qm-e-vc-button.png';
 
 const EntryPage: React.FC = () => {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeadingSerif, TextMono } from '../atoms/Typography';
+// import { HeadingSerif, TextMono } from '../atoms/Typography';
 
 interface PageHeaderProps {
   title: string;

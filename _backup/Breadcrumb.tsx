@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TextMono } from '../atoms/Typography';
+// import { TextMono } from '../atoms/Typography';
 
 interface BreadcrumbProps {
   currentPath: string;

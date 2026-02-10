@@ -11,7 +11,6 @@ interface AboutData {
   profileImage: string;
   bio: string[];
   skills: string[];
-  socials: SocialLink[];
 }
 
 export const ABOUT_DATA: AboutData = {
@@ -24,9 +23,4 @@ export const ABOUT_DATA: AboutData = {
     skills: [
       "Photography", "Videography", "Photo Editing", "Video Editing", "Graphic Design", "UI/UX", "HTML & CSS", "React", "JavaScript"
     ],
-    // socials: [
-    //   { name: 'LinkedIn', url: '#', iconSrc: ICONS.SOCIAL_LINKEDIN },
-    //   { name: 'GitHub', url: '#', iconSrc: ICONS.SOCIAL_GITHUB },
-    //   { name: 'Twitter', url: '#', iconSrc: ICONS.SOCIAL_TWITTER },
-    // ],
-}
+  }

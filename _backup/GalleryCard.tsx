@@ -1,6 +1,6 @@
 import React from 'react';
-import { PortalImage } from '../atoms/PortalImage';
-import { HeadingSerif, TextMono } from '../atoms/Typography';
+// import { PortalImage } from '../atoms/PortalImage';
+// import { HeadingSerif, TextMono } from '../atoms/Typography';
 
 interface GalleryCardProps {
   id: string;

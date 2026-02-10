@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { CategoryNavigation} from '../components/molecules/CategoryNavigation';
-import { ImageFrame } from '../components/atoms/ImageFrame';
-import { VideoGallery } from '../components/organisms/VideoGallery';
-import { HeadingSerif } from '../components/atoms/Typography';
+// import { CategoryNavigation} from '../components/molecules/CategoryNavigation';
+// import { ImageFrame } from '../components/atoms/ImageFrame';
+// import { VideoGallery } from '../components/organisms/VideoGallery';
+// import { HeadingSerif } from '../components/atoms/Typography';
 
 type Category = "Photo" | "Design" | "Video" | "Drawings" | "Sculptures"
 

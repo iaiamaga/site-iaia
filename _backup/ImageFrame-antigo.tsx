@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { PortalImage } from './PortalImage';
-import { TextMono, HeadingSerif } from './Typography';
+// import { PortalImage } from './PortalImage';
+// import { TextMono, HeadingSerif } from './Typography';
 
 interface ImageFrameProps {
   src: string;

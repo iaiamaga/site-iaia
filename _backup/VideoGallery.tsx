@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TvFrame } from '../atoms/TvFrame';
-import { TextMono, HeadingSerif } from '../atoms/Typography';
+// import { TextMono, HeadingSerif } from '../atoms/Typography';
 
 const VIDEOS = [
   { id: '1', title: 'Static Dreams', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ', desc: 'Fragment 01: The first echo.' },

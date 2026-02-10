@@ -1,5 +1,5 @@
 import React from 'react';
-import { GalleryCard } from '../molecules/GalleryCard';
+// import { GalleryCard } from '../molecules/GalleryCard';
 
 interface Artifact {
   id: string;
