@@ -14,7 +14,7 @@ interface AboutData {
 }
 
 export const ABOUT_DATA: AboutData = {
-    name: "Iara ou Iaia",
+    name: "Iara",
     profileImage: "./src/assets/profile-iaia.png",
     bio: [
       "I'm a passionate creative with a love for capturing moments and telling stories through various mediums. My journey started with a simple film camera, and since then, I've explored the worlds of digital photography, videography, art, and design.",
