@@ -2,6 +2,8 @@ import { type GalleryImage } from "../atoms/ImageGallery"
 import AppHealth from "../../assets/designs/wireframes/wireframe-apphealth.png";
 import Networkstates from "../../assets/designs/posts-desconferencia/design-desconferencia404-networkstates.png";
 import Lojavirtual from "../../assets/designs/wireframes/wireframe-lojavirtual.png";
+import Domingueira from "../../assets/designs/posts-emporio/domingueira-agrvai.png";
+import Bobmarley from "../../assets/designs/posts-emporio/domingueira-tribute-bobmarley-im2b(v3).png";
 import Coordinations from "../../assets/designs/posts-desconferencia/design-desconferencia404-coodinations.jpg";
 
 export const DESIGN_IMAGES: GalleryImage[] = [
@@ -11,6 +13,20 @@ export const DESIGN_IMAGES: GalleryImage[] = [
         alt: 'Um wireframe de um aplicativo de atividade fisica',
         title: 'Wireframe alta fidelidade - HealthApp',
         description: 'Um wireframe de alta fidelidade que fiz nop processo de um curso de UI e UX design. Esse design foi particularmente desafiador porque eu ainda não sabia nada de figma e na hora de fazer o protótipo de fato deu tudo errado!! kkkkkk mas valeu muito porque hoje em dia eu já fico menos perdida para fazer protótipos.'
+    },
+    {
+        src: Domingueira,
+        href: '#',
+        alt: 'Um flyer para um evento de domingueira do Empório Zíngaro',
+        title: 'Flyer de domingueira do Empório Zíngaro',
+        description: 'Um flyer para um evento de domingueira do Empório Zíngaro. Foi uma experiência legal e desafiadora, testei a nova ferramenta Affinity e no fim consegui criar uma identidade visual coerente com o evento.'
+    },
+    {
+        src: Bobmarley,
+        href: '#',
+        alt: 'Um flyer para um evento de homenagem ao Bob Marley',
+        title: 'Flyer de homenagem ao Bob Marley',
+        description: 'Um flyer para um evento de homenagem ao Bob Marley que fiz no contexto do projeto de eventos para o Empório Zíngaro.'
     },
     { 
         src: Networkstates,
