@@ -34,7 +34,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={image.href}
               className="block relative overflow-hidden rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-400 focus-visible:ring-offset-[#6921A7]"
               aria-label={`View full-size image: ${image.title}`}
             >

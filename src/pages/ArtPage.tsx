@@ -10,7 +10,6 @@ export function ArtPage(): React.JSX.Element {
         {ART_IMAGES.map((image) => (
           <div key={image.src} className="group">
             <a
-              href={image.src}
               target="_blank"
               rel="noopener noreferrer"
               className="block relative overflow-hidden"

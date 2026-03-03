@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#160416]; 
+    @apply bg-[#070d2e]; 
   }
   
   a:link {

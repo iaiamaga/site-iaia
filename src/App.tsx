@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/molecules/NavBar';
 import { Sidebar } from './components/molecules/SideBar';
-import { CustomCursor } from './components/molecules/CustomCursor';;
+import CustomCursor from './components/atoms/CustomCursor';
 import { ImageGallery } from './pages/PageGallery';
 import { Footer } from './components/molecules/Footer';
 import { VideoPage } from './pages/VideoPage';
