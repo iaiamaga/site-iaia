@@ -1,4 +1,5 @@
 import React from 'react';
+import  BackgroundGradient  from './components/atoms/BackgroundGradient';
 import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/molecules/NavBar';
 import { Sidebar } from './components/molecules/SideBar';
@@ -15,10 +16,12 @@ import { OTHER_PHOTOSHOOT_FOLDERS } from './components/molecules/PhotoshootFolde
 function App(): React.JSX.Element {
   return (
     <>
+     
       <CustomCursor />
-
-        <div className="min-h-screen">
+        <BackgroundGradient />
+        <div className="min-h-screen relative z-10 min-h-screen">
           <div className="flex flex-col items-center w-full">
+
             <div className="max-w-[1000px] w-full">
               <Navbar />
 

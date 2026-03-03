@@ -27,6 +27,8 @@ export function ArtPage(): React.JSX.Element {
               <h3 className="text-fluid-base font-bold mt-4 mb-1">{image.title}</h3>
               <p className="text-fluid-sm">{image.description}</p>
             </div>
+
+            
           </div>
         ))}
       </div>
