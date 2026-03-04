@@ -4,7 +4,7 @@ import { ABOUT_DATA } from '../components/organisms/AboutData';
 
 
 export function AboutPage(): React.JSX.Element {
-  const { name, profileImage, bio, skills } = ABOUT_DATA;
+  const { name, profileImage, bio, skills, whatICanDo } = ABOUT_DATA;
   
   return (
     <div className="text-white p-4 max-w-4xl mx-auto">
@@ -33,6 +33,24 @@ export function AboutPage(): React.JSX.Element {
             <span key={skill} className="bg-violet-800 text-pink-300 px-4 py-2 rounded-full text-sm font-semibold">
               {skill}
             </span>
+          ))}
+        </div>
+      </section>
+
+      {/* What I Can Do Section */}
+      <section className="mb-12 mt-12">
+        <h2 className="text-3xl font-bold mb-6 text-center text-violet-200"> Coisas das quais posso ajudar: </h2>
+        <h3 className="text-lg text-center text-violet-300 mb-6"> Algumas das coisas que posso fazer, mas não se limitando a: </h3>
+        <div className="grid grid-cols-1 gap-6">
+          {whatICanDo.map((item, index) => (
+            <div key={index} className="bg-violet-900 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-pink-300">{item.title}</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                {item.description.map((desc, descIndex) => (
+                  <li key={descIndex} className="text-violet-200">{desc}</li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </section>

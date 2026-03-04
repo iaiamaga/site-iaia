@@ -42,8 +42,7 @@ export default function CustomCursor() {
     //  MOBILE — lógica de toque
     // ══════════════════════════════
     if (isMobile) {
-      // No mobile o cursor nativo continua visível (não escondemos)
-      // Só adicionamos o efeito de toque
+      document.body.style.cursor = "none";
 
       const handleTouchStart = (e: TouchEvent) => {
         Array.from(e.changedTouches).forEach((touch) => {
@@ -148,9 +147,11 @@ export default function CustomCursor() {
               width: 8,
               height: 8,
               borderRadius: "50%",
-              background: "rgba(255, 255, 255, 0.95)",
-              boxShadow:
-                "0 0 32px 20px rgba(255,255,255,0.7), 0 0 14px 4px rgba(255,255,255,0.3)",
+              background: isPointer ? "rgba(56, 182, 255, 0.95)" : "rgba(255, 255, 255, 0.95)",
+              boxShadow: isPointer
+                ? "0 0 32px 20px rgba(56,182,255,0.7), 0 0 14px 4px rgba(56,182,255,0.3)"
+                : "0 0 32px 20px rgba(255,255,255,0.7), 0 0 14px 4px rgba(255,255,255,0.3)",
+              transition: "background 0.2s ease, box-shadow 0.2s ease",
               pointerEvents: "none",
               zIndex: 99999,
               filter: "blur(4px)",

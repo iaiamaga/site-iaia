@@ -1,8 +1,8 @@
 import React from 'react';
 import  BackgroundGradient  from './components/atoms/BackgroundGradient';
 import { Routes, Route } from 'react-router-dom';
-import { Navbar } from './components/molecules/NavBar';
-import { Sidebar } from './components/molecules/SideBar';
+import { Navbar } from './components/organisms/NavBar';
+import { Sidebar } from './components/organisms/SideBar';
 import CustomCursor from './components/atoms/CustomCursor';
 import { ImageGallery } from './pages/PageGallery';
 import { Footer } from './components/molecules/Footer';
@@ -23,6 +23,7 @@ function App(): React.JSX.Element {
           <div className="flex flex-col items-center w-full">
 
             <div className="max-w-[1000px] w-full">
+
               <Navbar />
 
               <div className="flex flex-col lg:flex-row p-[11px] align-top main-content">

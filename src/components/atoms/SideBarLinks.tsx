@@ -1,17 +1,17 @@
-import camera from '../../assets/icons/camera.png';
-import video from '../../assets/icons/video.png';
-import paleta from '../../assets/icons/paleta-de-pintura.png';
-import caneta from '../../assets/icons/caneta.png';
+import { ICONS }from "../atoms/Icons";
+import type { ReactNode } from "react";
 
 interface SidebarLink {
-  to: string;
-  src: string;
-  alt: string;
+    to: string;
+    src?: string;        // opcional agora
+    icon?: ReactNode;    // troca SVGRectElement por ReactNode
+    alt: string;
+    className: string;
 }
 
 export const SIDEBAR_LINKS: SidebarLink[] = [
-  { to: '/photo', src: camera, alt: 'Photo' },
-  { to: '/video', src: video, alt: 'Video' },
-  { to: '/art', src: paleta, alt: 'Art' },
-  { to: '/design', src: caneta, alt: 'Design' },
+  { to: '/photo', icon: ICONS.SIDEBAR_PHOTO, alt: 'Photo', className: 'w-[64px] h-[64px]' },
+  { to: '/video', icon: ICONS.SIDEBAR_VIDEO, alt: 'Video', className: 'w-[64px] h-[64px]' },
+  { to: '/art', icon: ICONS.SIDEBAR_ART, alt: 'Art', className: 'w-[64px] h-[64px]' },
+  { to: '/design', icon: ICONS.SIDEBAR_DESIGN, alt: 'Design', className: 'w-[64px] h-[64px]' },
 ];
