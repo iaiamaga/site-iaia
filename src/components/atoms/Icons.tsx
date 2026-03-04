@@ -1,7 +1,7 @@
 import logo from "../../assets/im2b-logo-branco.png";
 import { Fingerprint } from "../animate-ui/icons/fingerprint";
 import { Lightbulb } from "../animate-ui/icons/lightbulb";
-import { StarIcon, type Star } from "../animate-ui/icons/star";
+import { StarIcon } from "../animate-ui/icons/star";
 import { BrushIcon } from "../animate-ui/icons/brush";
 import { PauseIcon } from "../animate-ui/icons/pause";
 import {  ClapperboardIcon } from "../animate-ui/icons/clapperboard";
