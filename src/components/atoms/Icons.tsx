@@ -5,7 +5,7 @@ import { StarIcon } from "../animate-ui/icons/star";
 import { BrushIcon } from "../animate-ui/icons/brush";
 import { PauseIcon } from "../animate-ui/icons/pause";
 import {  ClapperboardIcon } from "../animate-ui/icons/clapperboard";
-import { LayoutDashboard } from "../animate-ui/icons/layout-dashboard";
+import { Brush } from "../animate-ui/icons/layout-dashboard";
 
 export const ICONS = {
     NAV_MAIN: logo,
@@ -16,7 +16,7 @@ export const ICONS = {
     //NAV_EXTRAS: 'https://img.icons8.com/fluency-systems-filled/110/ffffff/sparkling.png',
     SIDEBAR_PHOTO: <PauseIcon animateOnHover size={52} key="pause" />,
     SIDEBAR_ART: <BrushIcon animateOnHover size={52} key="brush" />,
-    SIDEBAR_DESIGN:<LayoutDashboard animateOnHover size={52} key="layout-dashboard" />,
+    SIDEBAR_DESIGN:<Brush animateOnHover size={52} key="layout-dashboard" />,
     FOOTER_TOP: 'https://img.icons8.com/fluency-systems-filled/100/ffffff/up.png',
     FOOTER_ARROW: 'https://img.icons8.com/fluency-systems-filled/50/ffffff/arrow.png',
     SOCIAL_LINKEDIN: 'https://img.icons8.com/ios-filled/100/ffffff/linkedin.png',

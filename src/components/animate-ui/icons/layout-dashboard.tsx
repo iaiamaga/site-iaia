@@ -1,109 +1,21 @@
 'use client';
 
-// import * as React from 'react';
-import { motion, type Variants } from 'motion/react';
+import { motion } from 'motion/react';
+
 
 import {
-  getVariants,
-  useAnimateIconContext,
+  
   IconWrapper,
   type IconProps,
 } from '@/components/animate-ui/icons/icon';
 
-type LayoutDashboardProps = IconProps<keyof typeof animations>;
+import { getVariants, useAnimateIconContext, } from '@/components/animate-ui/icons/utils';
 
-const animations = {
-  default: {
-    rect1: {
-      initial: {
-        height: 9,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-      animate: {
-        height: 5,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-    },
-    rect2: {
-      initial: {
-        height: 5,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-      animate: {
-        height: 9,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-    },
-    rect3: {
-      initial: {
-        height: 9,
-        y: 0,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-      animate: {
-        height: 5,
-        y: 4,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-    },
-    rect4: {
-      initial: {
-        height: 5,
-        y: 0,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-      animate: {
-        height: 9,
-        y: -4,
-        transition: { duration: 0.3, ease: 'easeInOut' },
-      },
-    },
-  } satisfies Record<string, Variants>,
-  'default-loop': {
-    rect1: {
-      initial: {
-        height: 9,
-      },
-      animate: {
-        height: [9, 5, 9],
-        transition: { duration: 0.6, ease: 'easeInOut' },
-      },
-    },
-    rect2: {
-      initial: {
-        height: 5,
-      },
-      animate: {
-        height: [5, 9, 5],
-        transition: { duration: 0.6, ease: 'easeInOut' },
-      },
-    },
-    rect3: {
-      initial: {
-        height: 9,
-        y: 0,
-      },
-      animate: {
-        height: [9, 5, 9],
-        y: [0, 4, 0],
-        transition: { duration: 0.6, ease: 'easeInOut' },
-      },
-    },
-    rect4: {
-      initial: {
-        height: 5,
-        y: 0,
-      },
-      animate: {
-        height: [5, 9, 5],
-        y: [0, -4, 0],
-        transition: { duration: 0.6, ease: 'easeInOut' },
-      },
-    },
-  } satisfies Record<string, Variants>,
-} as const;
+import { animations } from './brush-animations';
 
-function IconComponent({ size, ...props }: LayoutDashboardProps) {
+type BrushProps = IconProps<keyof typeof animations>;
+
+function IconComponent({ size, ...props }: BrushProps) {
   const { controls } = useAnimateIconContext();
   const variants = getVariants(animations);
 
@@ -118,49 +30,26 @@ function IconComponent({ size, ...props }: LayoutDashboardProps) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
+      variants={variants.group}
+      initial="initial"
+      animate={controls}
       {...props}
     >
-      <motion.rect
-        width={7}
-        height={9}
-        x={3}
-        y={3}
-        rx={1}
-        ry={1}
-        variants={variants.rect1}
+      <motion.path
+        d="m11 10 3 3"
+        variants={variants.path1}
         initial="initial"
         animate={controls}
       />
-      <motion.rect
-        width={7}
-        height={5}
-        x={14}
-        y={3}
-        rx={1}
-        ry={1}
-        variants={variants.rect2}
+      <motion.path
+        d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"
+        variants={variants.path2}
         initial="initial"
         animate={controls}
       />
-      <motion.rect
-        width={7}
-        height={9}
-        x={14}
-        y={12}
-        rx={1}
-        ry={1}
-        variants={variants.rect3}
-        initial="initial"
-        animate={controls}
-      />
-      <motion.rect
-        width={7}
-        height={5}
-        x={3}
-        y={16}
-        rx={1}
-        ry={1}
-        variants={variants.rect4}
+      <motion.path
+        d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"
+        variants={variants.path3}
         initial="initial"
         animate={controls}
       />
@@ -168,14 +57,9 @@ function IconComponent({ size, ...props }: LayoutDashboardProps) {
   );
 }
 
-function LayoutDashboard(props: LayoutDashboardProps) {
+function Brush(props: BrushProps) {
   return <IconWrapper icon={IconComponent} {...props} />;
 }
 
-export {
-  animations,
-  LayoutDashboard,
-  LayoutDashboard as LayoutDashboardIcon,
-  type LayoutDashboardProps,
-  type LayoutDashboardProps as LayoutDashboardIconProps,
-};
+export { Brush, Brush as BrushIcon };
+export type { BrushProps, BrushProps as BrushIconProps };

@@ -49,9 +49,38 @@ function App(): React.JSX.Element {
                       <Route path="/video" element={<VideoPage />} />
                       <Route path="/art" element={<ArtPage />} />
                       <Route path="/design" element={<DesignPage />} />
-                      
+   
+          {OTHER_PHOTOSHOOT_FOLDERS.map((folder) => (
+                        <Route
+                          key={folder.href}
+                          path={folder.href}
+                          element={<UnderConstruction title={folder.text} />}
+                        />
+                      ))}
+                    </Routes>
+                  </main>
+
+                  <div className="py-0.5"></div>
+                  <p id="links" className="p-[5px] text-center">
+                    <strong>Arranged roughly with most recent at top</strong>
+                  </p>
+                  <div className="py-0.5"></div>
+
+                  <Footer otherPhotoshootFolders={OTHER_PHOTOSHOOT_FOLDERS} />
+
+                  <div className="py-10"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+   
+   </>
+  );
+}
+
 interface UnderConstructionProps {
-  title?: string;
+  title?: string
 }
 
 const UnderConstruction: React.FC<UnderConstructionProps> = ({ title = "This page" }) => (

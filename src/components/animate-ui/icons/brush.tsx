@@ -3,11 +3,12 @@
 import { motion, type Variants } from 'motion/react';
 
 import {
-  getVariants,
-  useAnimateIconContext,
+  
   IconWrapper,
   type IconProps,
 } from '@/components/animate-ui/icons/icon';
+
+import { getVariants, useAnimateIconContext, } from '@/components/animate-ui/icons/utils';
 
 type BrushProps = IconProps<keyof typeof animations>;
 
