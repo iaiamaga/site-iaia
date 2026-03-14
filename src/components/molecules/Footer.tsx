@@ -14,7 +14,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ otherPhotoshootFolders }) => {
   return (
     <footer className="w-full" role="contentinfo">
-      <div className="flex justify-center items-center my-4">
+      <div className="flex justify-center items-center my-4 m-30">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="block mx-auto rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-[#6921A7] [&:focus-visible>img]:invert"

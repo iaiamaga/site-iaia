@@ -60,7 +60,7 @@ function App(): React.JSX.Element {
                     </Routes>
                   </main>
 
-                  <div className="py-0.5"></div>
+                  <div className="py-0.5 m-20"></div>
                   <p id="links" className="p-[5px] text-center">
                     <strong>Arranged roughly with most recent at top</strong>
                   </p>

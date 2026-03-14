@@ -7,9 +7,9 @@ import {
 import { getVariants, useAnimateIconContext, } from '@/components/animate-ui/icons/utils';
 import { motion, type Variants } from 'motion/react';
 
-type StarProps = IconProps<keyof typeof animations>;
+export type StarProps = IconProps<keyof typeof animations>;
 
-const animations = {
+export const animations = {
   default: {
     group: {
       initial: {

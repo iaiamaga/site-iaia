@@ -10,7 +10,8 @@ import {
  
 } from '@/components/animate-ui/icons/icon';
 
-import { IconComponent, StarProps } from '@/components/animate-ui/icons/animations/star';
+import { IconComponent } from '@/components/animate-ui/icons/animations/star';
+import type { StarProps } from '@/components/animate-ui/icons/animations/star';
 
 function Star(props: StarProps) {
   return <IconWrapper icon={IconComponent} {...props} />;
